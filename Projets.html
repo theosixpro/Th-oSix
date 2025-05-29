@@ -71,33 +71,81 @@
 
       <div class="row">
 
-        <div class="col-lg-12">
-          <h4>SAE5.01 - Concevoir, réaliser et présenter une solution technique</h4>
-          <p>
-            Dans ce projet, j'ai configuré un réseau utilisant plusieurs VLANs afin de segmenter le trafic et d'améliorer la sécurité et l'efficacité du réseau. J'ai utilisé Cisco Packet Tracer pour la simulation et développé des scripts d'automatisation des configurations.
-          </p>
-        </div>
+       <div class="col-lg-12 mt-4">
+  <h4>SAE 5.01 Concevoir, réaliser et présenter une solution technique</h4>
+  <p style="text-align: justify; font-size: 16px; line-height: 1.6;">
+    Dans le cadre de cette SAE, nous avons conçu et mis en œuvre une infrastructure virtualisée complète à l’aide de l’hyperviseur <strong>Proxmox</strong>. Ce projet, réalisé en trinôme, visait à fournir un environnement distant accessible via une interface web unifiée, avec un système d’accès sécurisé aux machines virtuelles pour les utilisateurs finaux. Nous avons suivi toutes les étapes d’un cycle de projet informatique : planification, installation, configuration, test, documentation et présentation.
+  </p>
+  <p style="text-align: justify; font-size: 16px; line-height: 1.6;">
+    Après avoir analysé les différentes solutions d’hyperviseurs, nous avons opté pour Proxmox en raison de sa flexibilité, de sa gratuité et de son support des conteneurs LXC et des machines virtuelles KVM. Chaque membre de l’équipe a été assigné à un rôle précis : installation de l’hyperviseur, création des machines modèles (réseau, développeur), mise en place de l’accès distant via <strong>Apache Guacamole</strong>, et réalisation de la documentation utilisateur.
+  </p>
+  <p style="text-align: justify; font-size: 16px; line-height: 1.6;">
+    Plusieurs machines virtuelles ont été déployées, configurées et connectées à des réseaux NAT et VLAN. Nous avons installé sur ces VMs des outils comme <strong>GNS3, Cisco Packet Tracer, Visual Studio Code</strong>, et configuré les routes réseau nécessaires pour assurer la communication entre les différentes machines du système. L’accès distant a été rendu possible grâce à l’installation de Guacamole, un outil open-source permettant des connexions via SSH, RDP et VNC à travers une interface web sécurisée.
+  </p>
+  <p style="text-align: justify; font-size: 16px; line-height: 1.6;">
+    Nous avons rencontré divers défis techniques, notamment avec le protocole RDP sur Linux et les limitations d'affichage. Après plusieurs tests, nous avons trouvé des solutions fiables via <strong>TigerVNC</strong> pour les connexions Linux et validé le fonctionnement avec Remmina sur Windows. Une base de données a été intégrée à Guacamole pour la gestion centralisée des utilisateurs et des connexions. Des certificats ont également été créés pour sécuriser les échanges.
+  </p>
+  <p style="text-align: justify; font-size: 16px; line-height: 1.6;">
+    Pour finaliser le projet, nous avons rédigé une documentation utilisateur complète expliquant comment se connecter à l'interface Guacamole et accéder à la machine virtuelle adaptée aux besoins de chaque utilisateur. Cette interface permettait, par exemple, de proposer automatiquement des outils installés comme Wireshark, Packet Tracer ou des environnements de développement selon le profil.
+  </p>
+  <p style="text-align: justify; font-size: 16px; line-height: 1.6;">
+    Cette SAE a été l’occasion de mettre en œuvre des compétences variées : <strong>virtualisation, administration système, développement web, sécurité réseau et documentation technique</strong>. Elle nous a également appris à <strong>travailler efficacement en équipe</strong>, à gérer un projet sur plusieurs semaines, à répartir les responsabilités et à livrer un produit final opérationnel et documenté.
+  </p>
+</div>
+
+
+    <div class="col-lg-12 mt-4">
+  <h4>SAE5.Cyber.03 - Assurer la sécurisation et la supervision avancées d'un système d'information</h4>
+  <p style="text-align: justify; font-size: 16px; line-height: 1.6;">
+    Dans le cadre de cette SAE, j’ai réalisé un projet de supervision avancée d’un système d’information en utilisant la suite <strong>Elastic (ELK)</strong> sur une machine virtuelle Ubuntu. L’objectif était de mettre en place une collecte et une visualisation en temps réel des journaux système à des fins de cybersécurité et de détection d'incidents.
+  </p>
+  <p style="text-align: justify; font-size: 16px; line-height: 1.6;">
+    Pour cela, j’ai configuré et utilisé <strong>Filebeat</strong> pour la collecte des logs, couplé à <strong>Elasticsearch</strong> pour le stockage des données et à <strong>Kibana</strong> pour leur visualisation. Après plusieurs heures de supervision, les données collectées ont mis en évidence les processus actifs, notamment ceux liés au noyau Linux (<code>kernel</code>), aux services système (<code>systemd</code>), à l’environnement graphique (<code>gnome-shell</code>, <code>dbus-daemon</code>) ainsi qu’à Filebeat lui-même. 
+  </p>
+  <p style="text-align: justify; font-size: 16px; line-height: 1.6;">
+    L’analyse des logs a permis d’identifier des événements significatifs, tels que le démarrage de services, des messages système, ou la désactivation de services spécifiques (comme <code>fprintd.service</code>). Des filtres ont été mis en place dans Kibana pour affiner les recherches et isoler les événements par processus, date ou gravité. Grâce à cette approche, j’ai pu détecter, analyser et documenter l'activité du système, élément essentiel dans une démarche de sécurisation proactive.
+  </p>
+  <p style="text-align: justify; font-size: 16px; line-height: 1.6;">
+    Ce projet m’a permis d’acquérir une compréhension plus fine des outils de supervision, de l’écosystème ELK, mais aussi des bonnes pratiques de journalisation et de veille en cybersécurité. J’ai renforcé mes compétences en configuration système, en analyse de logs, et en mise en place de tableaux de bord pertinents pour assurer la surveillance en continu d’une machine critique. Ce type de supervision constitue une première brique fondamentale vers la mise en œuvre d’un <strong>SOC (Security Operations Center)</strong> à l’échelle d’un réseau d’entreprise.
+  </p>
+</div>
 
         <div class="col-lg-12 mt-4">
-          <h4>SAE5.Cyber.03 - Assurer la sécurisation et la supervision avancées d'un système d'information</h4>
-          <p>
-            Réalisation d'un audit complet de cybersécurité pour une entreprise fictive. Analyse des risques, proposition de solutions correctives, et rédaction d'un rapport professionnel suivant les normes ISO 27001.
-          </p>
-        </div>
+  <h4>R5 ROM.09 & Saé 5 ROM.03 Déployer et gérer les services ROM</h4>
+  <p style="text-align: justify; font-size: 16px; line-height: 1.6;">
+    Ce projet transversal, réalisé dans le cadre des unités R5 ROM.09 et Saé 5 ROM.03, nous a permis de concevoir et de déployer une infrastructure complète de communication multimédia. L'objectif principal était de développer une solution de visioconférence en environnement virtualisé, comprenant la voix, la vidéo et la messagerie instantanée, tout en assurant la sécurisation des échanges. Ce travail s'est déroulé en trinôme et a couvert l'ensemble du cycle de vie d'un service réseau multimédia, de l'installation jusqu’à l’audit de sécurité.
+  </p>
+  <p style="text-align: justify; font-size: 16px; line-height: 1.6;">
+    Nous avons tout d'abord installé un serveur <strong>Asterisk</strong> sur une machine virtuelle Alpine Linux, puis configuré deux téléphones IP (CISCO et FANVIL) pour tester des communications en voix sur IP (VoIP). Nous avons mis en place les fichiers de configuration nécessaires, notamment via un serveur TFTP pour l’appareil CISCO. L'enregistrement des terminaux, la gestion des boîtes vocales et la création d’un plan de numérotation ont été autant d’étapes nous initiant aux bases de la téléphonie IP professionnelle.
+  </p>
+  <p style="text-align: justify; font-size: 16px; line-height: 1.6;">
+    Nous avons ensuite déployé un serveur web avec <strong>NGINX</strong> et intégré une première interface HTML/JavaScript basée sur la librairie <strong>SIP.js</strong>, permettant des appels voix entre postes via WebRTC. Progressivement, cette interface a été enrichie par l'ajout de fonctionnalités vidéo et de messagerie instantanée, rendant l’expérience utilisateur plus complète. Un véritable <strong>portail web de visioconférence</strong> a été conçu, avec un design simple mais fonctionnel.
+  </p>
+  <p style="text-align: justify; font-size: 16px; line-height: 1.6;">
+    La dimension sécurité a également occupé une place importante. Nous avons réalisé un <strong>audit de sécurité</strong> des échanges entre le navigateur et le serveur Asterisk à l'aide d’<strong>outils de capture réseau (Wireshark)</strong>, identifié les vulnérabilités potentielles (notamment le manque de chiffrement), puis mis en œuvre une solution de sécurisation des flux à l’aide du protocole <strong>TLS</strong>. Cela nous a permis d'acquérir une compréhension concrète des enjeux de confidentialité et d'intégrité dans les communications VoIP.
+  </p>
+  <p style="text-align: justify; font-size: 16px; line-height: 1.6;">
+    Ce projet nous a permis de développer une large gamme de compétences techniques : déploiement et configuration de services réseau sur Linux, gestion de services VoIP, développement d'interfaces web interactives, usage de bibliothèques JavaScript spécialisées, et mise en œuvre de solutions de sécurité. En parallèle, nous avons renforcé nos compétences en <strong>travail collaboratif</strong> : gestion de projet en trinôme, répartition des tâches, synchronisation du code, et rédaction d’un rapport technique détaillant chaque étape du projet.
+  </p>
+  <p style="text-align: justify; font-size: 16px; line-height: 1.6;">
+    En conclusion, cette SAE nous a offert une immersion concrète dans le métier d’administrateur de services multimédias en environnement réseau. Elle nous a appris à conjuguer <strong>rigueur technique, autonomie, documentation et travail d'équipe</strong> pour mener à bien un projet ambitieux, ancré dans des usages réels du monde professionnel.
+  </p>
+</div>
 
-        <div class="col-lg-12 mt-4">
-          <h4>R5 ROM.09 & Saé 5 ROM.03 Déployer et gérer les services ROM</h4>
-          <p>
-            Développement d'un site web vitrine entièrement responsive avec HTML, CSS, et Bootstrap. Ce site met en avant mes compétences, mon parcours professionnel, et mes projets personnels.
-          </p>
-        </div>
 
-        <div class="col-lg-12 mt-4">
-          <h4>SAE R5.04 Cycle de vie d'un projet informatique</h4>
-          <p>
-            Utilisation de RPG Maker et Ren'Py pour créer un jeu vidéo interactif avec scénario, graphismes personnalisés et système de sauvegarde. Projet personnel pour approfondir mes compétences en logique de programmation et en design graphique.
-          </p>
-        </div>
+       <div class="col-lg-12 mt-4">
+  <h4>SAE R5.04 Cycle de vie d'un projet informatique</h4>
+  <p style="text-align: justify; font-size: 16px; line-height: 1.6;">
+    Dans cette SAE, nous avons travaillé en équipe sur un projet informatique complet en appliquant les différentes étapes du cycle de vie d’un logiciel : analyse des besoins, planification, développement, test, déploiement et suivi. Ce projet nous a confrontés à des situations concrètes de gestion de projet collaboratif, nous amenant à structurer notre travail de manière rigoureuse et organisée.
+  </p>
+  <p style="text-align: justify; font-size: 16px; line-height: 1.6;">
+    L’un des aspects clés de ce projet a été l’apprentissage approfondi de l’outil <strong>GitLab</strong>, utilisé comme plateforme centrale de versioning et de gestion collaborative du code. Nous avons acquis une réelle autonomie sur les principales commandes Git en ligne de commande, telles que <code>git init</code>, <code>git clone</code>, <code>git add</code>, <code>git commit</code>, <code>git push</code>, <code>git pull</code>, et <code>git merge</code>. Grâce à ces outils, nous avons pu synchroniser notre travail, créer des branches pour développer de nouvelles fonctionnalités sans perturber la version principale, résoudre des conflits de fusion, et suivre précisément l’historique du projet.
+  </p>
+  <p style="text-align: justify; font-size: 16px; line-height: 1.6;">
+    L'utilisation de GitLab nous a également permis d'exploiter des fonctionnalités comme les <strong>issues</strong>, les <strong>merge requests</strong> et le <strong>wiki</strong> pour documenter le projet et répartir les tâches. Cela nous a amenés à améliorer notre communication, à planifier le travail en sprints, à respecter les délais et à garantir une meilleure qualité de code grâce aux revues croisées entre membres de l’équipe. Ce projet a donc été une expérience précieuse pour apprendre à <strong>travailler efficacement en groupe sur un projet informatique structuré</strong>, avec des outils professionnels largement utilisés dans le monde du développement logiciel.
+  </p>
+</div>
+
         <div class="col-lg-12 mt-4">
           <h4>SAE6.ROM.01 Réaliser une veille technologique</h4>
 <p style="text-align: justify; font-size: 16px; line-height: 1.6;">
